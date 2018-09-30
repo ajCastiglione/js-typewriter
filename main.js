@@ -39,6 +39,9 @@ class TypeWriter {
       // Will pause at the end of the word
       typeSpeed = this.wait;
       this.isDeleting = true;
+      // Add blinking effect to cursor
+      const cursor = document.querySelector(".txt");
+      cursor.classList.add("borderBlink");
     } else if (this.isDeleting && this.txt === "") {
       this.isDeleting = false;
       // Move onto next word
